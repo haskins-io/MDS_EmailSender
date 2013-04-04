@@ -9,6 +9,7 @@ friendly.
 It is very easy to use, just download the MDS_EmailSender.php file from this
 folder, add it to your class, then create a message and send it.
 
+<pre>
 <?php
 
 require_once ('MDS_EmailSender.php');
@@ -43,3 +44,4 @@ $emailSender = new MDS_EmailSender();<br/><br/>
 $emailSender->send($emailMesage);<br/><br/>
 
 ?>
+</pre>
