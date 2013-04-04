@@ -10,7 +10,6 @@ It is very easy to use, just download the MDS_EmailSender.php file from this
 folder, add it to your class, then create a message and send it.
 
 <pre>
-<?php
 
 require_once ('MDS_EmailSender.php');
 
@@ -18,18 +17,18 @@ require_once ('MDS_EmailSender.php');
 $emailMesage = new MDS_EmailSender_Message();
 
 // Say who it is from
-$emailMesage->addFrom("Name <name@domain.com>");
+$emailMesage->addFrom("Name &lt;name@domain.com&gt;");
 
 // Say who it is going to. You can call these multiple times if needed
-$emailMesage->addToRecipient("Name <name@domain.com>");
-$emailMesage->addCcRecipient("Name <name@domain.com>");  // Optional
-$emailMesage->addBccRecipient("Name <name@domain.com>"); // Optional
+$emailMesage->addToRecipient("Name &lt;name@domain.com&gt;");
+$emailMesage->addCcRecipient("Name &lt;name@domain.com&gt;");  // Optional
+$emailMesage->addBccRecipient("Name &lt;name@domain.com&gt;"); // Optional
 
 // Set the subject line
 $emailMesage->setSubject("Test of the new Email Code");>
 
 // Set the HTML and plain body. You can just either one if needed.
-$emailMesage->setHtmlBody("<p>This is some HTML</p>");
+$emailMesage->setHtmlBody("&lt;p&gt;This is some HTML&lt;/p&gt;");
 $emailMesage->setPlainBody("This is some plain text");
 
 // Maybe add an attachment or two
@@ -43,5 +42,4 @@ $emailSender = new MDS_EmailSender();
 // Send the email
 $emailSender->send($emailMesage);
 
-?>
 </pre>
